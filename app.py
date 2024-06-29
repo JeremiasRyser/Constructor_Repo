@@ -22,7 +22,7 @@ def plot():
         df['time_updated'] = pd.to_datetime(time_updated)
         
         plt.figure(figsize=(10, 6))
-        plt.plot(df.index, df['rate_float'], marker='o', linestyle='-', color='b')
+        plt.plot(df.index, df['rate_float'], marker='h', ms = 10, mec = 'k', linestyle='none', color='m')
         
         for index, value in enumerate(df['rate_float']):
             plt.annotate(f"{value:.2f}", (df.index[index], value), textcoords="offset points", xytext=(0,5), ha='center')
